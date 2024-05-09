@@ -59,6 +59,15 @@ export default function Home() {
               Discord
             </a>
           </li>
+          <li>
+            <a
+              className="bg-red-500 text-white px-4 py-2 rounded-3xl"
+              href="https://cfx.re/join/gpgkgz"
+              target="_blank"
+            >
+              Se connecter
+            </a>
+          </li>
         </ul>
       </nav>
       <header
