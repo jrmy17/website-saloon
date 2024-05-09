@@ -101,7 +101,7 @@ export default function Home() {
         style={{ backgroundImage: "url('/background.jpg')" }}
       >
         <div
-          className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center text-white text-8xl font-bold flex-col"
+          className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center text-white text-6xl xl:text-8xl font-bold flex-col"
           style={{
             background: "rgba(0, 0, 0, 0.7)",
           }}
