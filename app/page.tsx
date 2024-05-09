@@ -1,113 +1,159 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="">
+      <nav
+        className={`flex items-center justify-between p-4 pl-80 pr-80 text-white top-0 z-50 transition-colors fixed left-0 right-0 ${
+          isScrolled ? "bg-white text-black p-2" : "bg-transparent"
+        }`}
+        style={{
+          transition: "background-color 0.5s, padding 0.5s",
+        }}
+      >
+        <Image src="/Saloon.png" alt="Saloon RôlePlay" width={50} height={50} />
+        <ul className="flex items-center space-x-4">
+          <li>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTop();
+              }}
+            >
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.saloonrp.fr/" target="_blank">
+              Wiki
+            </a>
+          </li>
+          <li>
+            <a href="https://saloon-role-play.tebex.io/" target="_blank">
+              Boutique
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/saloonrp" target="_blank">
+              Discord
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <header
+        className="bg-cover bg-center relative h-screen bg-fixed bg-repeat overflow-hidden"
+        style={{ backgroundImage: "url('/background.jpg')" }}
+      >
+        <div
+          className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center text-white text-6xl font-bold flex-col"
+          style={{
+            background: "rgba(0, 0, 0, 0.7)",
+          }}
+        >
+          <h2 className="text-2xl font-bold text-white">
+            Serveur RedM FreeAccess
+          </h2>
+          <h1>Saloon RôlePlay</h1>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+        <div>
+          <svg
+            viewBox="0 0 1500 200"
+            className="w-full absolute bottom-[-28px]"
+          >
+            <path
+              className="fill-white"
+              d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"
+            ></path>
+          </svg>
+        </div>
+      </header>
+      <section className="p-6 pl-[30rem] pr-[30rem]">
+        <h2 className="text-2xl font-bold text-black text-center">
+          Notre serveur
+        </h2>
+        <div className="flex justify-center space-x-4 mt-8">
+          <div className="w-1/3">
+            <h3 className="text-xl font-bold text-black">01</h3>
+            <p className="text-black">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+            </p>
+          </div>
+          <div className="w-1/3">
+            <h3 className="text-xl font-bold text-black">02</h3>
+            <p className="text-black">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+            </p>
+          </div>
+          <div className="w-1/3">
+            <h3 className="text-xl font-bold text-black">03</h3>
+            <p className="text-black">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="p-6 pl-[30rem] pr-[30rem] bg-slate-100">
+        <h2 className="text-2xl font-bold text-black text-left">
+          A propos de nous
+        </h2>
+        <div className="flex justify-center space-x-4 mt-8">
+          <p className="text-black">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+          </p>
+        </div>
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/background.jpg"
+          alt="Saloon RôlePlay"
+          width={500}
+          height={500}
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
+      <footer className="p-4 pl-40 pr-40 text-center text-white bg-black">
+        <div>
+          <p>Saloon RôlePlay - Tous droits réservés</p>
+        </div>
+      </footer>
     </main>
   );
 }
