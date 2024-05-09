@@ -97,7 +97,7 @@ export default function Home() {
         </button>
       </nav>
       <header
-        className="bg-auto bg-center relative h-screen bg-fixed bg-repeat overflow-hidden"
+        className="bg-cover bg-center relative h-screen bg-fixed bg-repeat overflow-hidden"
         style={{ backgroundImage: "url('/background.jpg')" }}
       >
         <div
