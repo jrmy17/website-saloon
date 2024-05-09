@@ -21,3 +21,25 @@
     text-wrap: balance;
   }
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10rem;
+
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10rem;
+
+  background: rgb(239 68 68 / 50%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 10rem;
+
+  background: rgb(239 68 68 / 50%);
+}
