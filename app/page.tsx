@@ -48,7 +48,7 @@ export default function Home() {
         <Image src="/Saloon.png" alt="Saloon RôlePlay" width={50} height={50} />
         {/* Hamburger Icon for Mobile */}
         <ul
-          className={`sm:flex-row items-center gap-3 flex-col md:gap-10 ${
+          className={`sm:flex-row items-center gap-3 flex-col md:gap-10 font-bold ${
             isOpen ? "flex" : "hidden"
           }`}
         >
