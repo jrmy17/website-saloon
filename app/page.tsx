@@ -23,6 +23,12 @@ export default function Home() {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (window.innerWidth > 640) {
+      setIsOpen(true);
+    }
+  }, []);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -42,7 +48,7 @@ export default function Home() {
         <Image src="/Saloon.png" alt="Saloon RôlePlay" width={50} height={50} />
         {/* Hamburger Icon for Mobile */}
         <ul
-          className={`sm:flex-row items-center gap-10 flex-col ${
+          className={`sm:flex-row items-center gap-3 flex-col md:gap-10 ${
             isOpen ? "flex" : "hidden"
           }`}
         >
@@ -91,7 +97,7 @@ export default function Home() {
         </button>
       </nav>
       <header
-        className="bg-cover bg-center relative h-screen bg-fixed bg-repeat overflow-hidden"
+        className="bg-auto bg-center relative h-screen bg-fixed bg-repeat overflow-hidden"
         style={{ backgroundImage: "url('/background.jpg')" }}
       >
         <div
