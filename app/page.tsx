@@ -21,10 +21,18 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <main className="">
       <nav
-        className={`flex items-center justify-between p-4 pl-80 pr-80 top-0 z-50 transition-colors fixed left-0 right-0 ${
+        className={`flex items-center justify-between p-4 pl-6 pr-6 sm:pl-5 sm:pr-5 md:pl-20 md:pr-20
+        lg:pl-40 lg:pr-40 xl:pl-60 xl:pr-60 xxl:pl-80 xxl:pr-80
+        top-0 z-50 transition-colors fixed left-0 right-0 ${
           isScrolled ? "bg-white text-black p-2" : "bg-transparent text-white"
         }`}
         style={{
@@ -32,7 +40,12 @@ export default function Home() {
         }}
       >
         <Image src="/Saloon.png" alt="Saloon RôlePlay" width={50} height={50} />
-        <ul className="flex items-center space-x-4 gap-10">
+        {/* Hamburger Icon for Mobile */}
+        <ul
+          className={`sm:flex-row items-center gap-10 flex-col ${
+            isOpen ? "flex" : "hidden"
+          }`}
+        >
           <li>
             <a
               href="#"
@@ -69,6 +82,13 @@ export default function Home() {
             </a>
           </li>
         </ul>
+        <button className="block sm:hidden" onClick={toggleMenu}>
+          <svg viewBox="0 0 100 80" className="w-6 h-5 fill-current">
+            <rect width="100" height="20" rx="10"></rect>
+            <rect y="30" width="100" height="20" rx="10"></rect>
+            <rect y="60" width="100" height="20" rx="10"></rect>
+          </svg>
+        </button>
       </nav>
       <header
         className="bg-cover bg-center relative h-screen bg-fixed bg-repeat overflow-hidden"
@@ -83,12 +103,12 @@ export default function Home() {
           <h2 className="text-2xl text-white font-light">
             Serveur RedM FreeAccess
           </h2>
-          <h1>Saloon RôlePlay</h1>
+          <h1 className="text-center">Saloon RôlePlay</h1>
         </div>
         <div>
           <svg
             viewBox="0 0 1500 200"
-            className="w-full absolute bottom-[-35px]"
+            className="w-full absolute bottom-0 sm:bottom-[-5px] md:bottom-[-10px] lg:bottom-[-15px] xl:bottom-[-20px] xxl:bottom-[-30px]"
           >
             <path
               className="fill-white"
@@ -97,12 +117,12 @@ export default function Home() {
           </svg>
         </div>
       </header>
-      <section className="p-6 pl-[30rem] pr-[30rem]">
+      <section className="p-6 pl-10 pr-10 sm:pl-15 sm:pr-15 lg:pl-20 lg:pr-20 xxl:pl-[20rem] xxl:pr-[20rem]">
         <h2 className="text-4xl font-bold text-black text-center">
           Notre serveur
         </h2>
-        <div className="flex justify-center space-x-4 mt-8">
-          <div className="w-1/3 border-solid border-2 border-gray-200 p-4">
+        <div className="flex flex-col sm:flex-row justify-center mt-8 gap-5">
+          <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">01</h3>
             <h4 className="text-2xl font-bold text-black">Lorem ipsum</h4>
             <p className="text-black">
@@ -114,7 +134,7 @@ export default function Home() {
               consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
             </p>
           </div>
-          <div className="w-1/3 border-solid border-2 border-gray-200 p-4">
+          <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">02</h3>
             <h4 className="text-2xl font-bold text-black">Lorem ipsum</h4>
             <p className="text-black">
@@ -126,7 +146,7 @@ export default function Home() {
               consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
             </p>
           </div>
-          <div className="w-1/3 border-solid border-2 border-gray-200 p-4">
+          <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">03</h3>
             <h4 className="text-2xl font-bold text-black">Lorem ipsum</h4>
             <p className="text-black">
@@ -140,7 +160,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="p-6 pl-[30rem] pr-[30rem] bg-slate-100">
+      <section className="p-6 pl-10 pr-10 sm:pl-15 sm:pr-15 lg:pl-20 lg:pr-20 xxl:pl-[20rem] xxl:pr-[20rem] bg-slate-100">
         <h2 className="text-4xl font-bold text-black text-left">
           A propos de nous
         </h2>
@@ -162,7 +182,7 @@ export default function Home() {
           height={500}
         />
       </section>
-      <footer className="p-4 pl-40 pr-40 text-center text-white bg-black">
+      <footer className="p-4 pl-10 pr-10 sm:pl-40 sm:pr-40 text-center text-white bg-black">
         <div>
           <p>Saloon RôlePlay - Tous droits réservés</p>
         </div>
