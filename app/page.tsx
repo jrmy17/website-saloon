@@ -88,7 +88,7 @@ export default function Home() {
             </a>
           </li>
         </ul>
-        <button className="block sm:hidden" onClick={toggleMenu}>
+        <button className="block sm:hidden w-12" onClick={toggleMenu}>
           <svg viewBox="0 0 100 80" className="w-6 h-5 fill-current">
             <rect width="100" height="20" rx="10"></rect>
             <rect y="30" width="100" height="20" rx="10"></rect>
