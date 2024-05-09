@@ -32,7 +32,7 @@ export default function Home() {
         }}
       >
         <Image src="/Saloon.png" alt="Saloon RôlePlay" width={50} height={50} />
-        <ul className="flex items-center space-x-4">
+        <ul className="flex items-center space-x-4 gap-10">
           <li>
             <a
               href="#"
@@ -155,6 +155,7 @@ export default function Home() {
           </p>
         </div>
         <Image
+          className="pt-10"
           src="/background.jpg"
           alt="Saloon RôlePlay"
           width={500}
