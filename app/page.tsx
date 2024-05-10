@@ -131,36 +131,39 @@ export default function Home() {
           <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">01</h3>
             <h4 className="text-2xl font-bold text-black">
-              Immersion Totale dans l&apos;Univers du Far West
+              Carrière de Hors-la-loi
             </h4>
             <p className="text-black">
-              Plongez dans l&apos;Amérique des années 1890 avec une expérience
-              de jeu détaillée et réaliste. Chaque interaction et décision
-              influencent un monde vivant où l&apos;histoire de chaque
-              personnage prend vie.
+              Embrassez une vie de danger et de liberté en devenant un
+              hors-la-loi redouté. Participez à des braquages, des duels et des
+              opérations clandestines, tout en échappant aux autorités pour
+              gravir les échelons du monde criminel.
             </p>
           </div>
           <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">02</h3>
             <h4 className="text-2xl font-bold text-black">
-              Communauté Engagée et Respectueuse
+              Voie de la Justice
             </h4>
             <p className="text-black">
-              Rejoignez une communauté de joueurs passionnés, dédiés à maintenir
-              un environnement respectueux et authentique. Ici, chaque joueur
-              contribue à créer une atmosphère accueillante et réaliste.
+              Engagez-vous dans la loi et l&apos;ordre en tant que shérif,
+              marshal ou membre des forces de l&apos;ordre. Protégez les
+              citoyens, poursuivez les criminels et maintenez la paix dans un
+              monde souvent chaotique, où chaque décision peut faire la
+              différence.
             </p>
           </div>
           <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">03</h3>
             <h4 className="text-2xl font-bold text-black">
-              Aventures et Histoires Captivantes
+              Entrepreneuriat et Commerce
             </h4>
             <p className="text-black">
-              Incarnez des personnages uniques et participez à des aventures
-              fascinantes. Tissez des histoires profondes et laissez votre
-              marque dans un monde sauvage et impitoyable, où chaque action
-              compte.
+              Lancez et développez votre propre entreprise dans une économie
+              dynamique et compétitive. Que vous choisissiez de gérer un saloon,
+              une ferme, un magasin général ou une autre entreprise, votre
+              succès dépendra de votre stratégie et de votre capacité à vous
+              adapter aux besoins du marché.
             </p>
           </div>
         </div>
