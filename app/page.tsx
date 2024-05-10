@@ -174,16 +174,16 @@ export default function Home() {
           <p className="text-black">
             Bienvenue dans <span className="font-bold">Saloon RP</span>, votre
             serveur rôleplay sérieux et immersif sur Red Dead Redemption 2 !
-            Plongez dans l'Amérique des années 1890, une époque de défis et
-            d'opportunités. Saloon RP offre une expérience de jeu riche en
+            Plongez dans l&apos;Amérique des années 1890, une époque de défis et
+            d&apos;opportunités. Saloon RP offre une expérience de jeu riche en
             détails, où chaque interaction et chaque décision influencent
-            l'univers vivant et authentique que nous avons créé. Ici, les
+            l&apos;univers vivant et authentique que nous avons créé. Ici, les
             joueurs peuvent incarner des personnages uniques, tisser des
             histoires profondes et participer à des aventures captivantes. Notre
             communauté engagée et passionnée veille à maintenir un environnement
-            respectueux et réaliste, permettant à chacun de s'immerger
-            pleinement dans l'esprit du Far West. Rejoignez-nous pour écrire
-            votre propre légende dans ce monde sauvage et impitoyable.
+            respectueux et réaliste, permettant à chacun de s&apos;immerger
+            pleinement dans l&apos;esprit du Far West. Rejoignez-nous pour
+            écrire votre propre légende dans ce monde sauvage et impitoyable.
           </p>
         </div>
         <Image
