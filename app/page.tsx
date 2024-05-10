@@ -125,43 +125,42 @@ export default function Home() {
       </header>
       <section className="p-6 pl-10 pr-10 sm:pl-15 sm:pr-15 lg:pl-20 lg:pr-20 xxl:pl-[20rem] xxl:pr-[20rem]">
         <h2 className="text-4xl font-bold text-black text-center">
-          Notre serveur
+          Bienvenue sur Saloon RP
         </h2>
         <div className="flex flex-col sm:flex-row justify-center mt-8 gap-5">
           <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">01</h3>
-            <h4 className="text-2xl font-bold text-black">Lorem ipsum</h4>
+            <h4 className="text-2xl font-bold text-black">
+              Immersion Totale dans l&apos;Univers du Far West
+            </h4>
             <p className="text-black">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+              Plongez dans l&apos;Amérique des années 1890 avec une expérience
+              de jeu détaillée et réaliste. Chaque interaction et décision
+              influencent un monde vivant où l&apos;histoire de chaque
+              personnage prend vie.
             </p>
           </div>
           <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">02</h3>
-            <h4 className="text-2xl font-bold text-black">Lorem ipsum</h4>
+            <h4 className="text-2xl font-bold text-black">
+              Communauté Engagée et Respectueuse
+            </h4>
             <p className="text-black">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+              Rejoignez une communauté de joueurs passionnés, dédiés à maintenir
+              un environnement respectueux et authentique. Ici, chaque joueur
+              contribue à créer une atmosphère accueillante et réaliste.
             </p>
           </div>
           <div className="w-full sm:w-1/3 border-solid border-2 border-gray-200 p-4">
             <h3 className="text-l font-bold text-red-500">03</h3>
-            <h4 className="text-2xl font-bold text-black">Lorem ipsum</h4>
+            <h4 className="text-2xl font-bold text-black">
+              Aventures et Histoires Captivantes
+            </h4>
             <p className="text-black">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+              Incarnez des personnages uniques et participez à des aventures
+              fascinantes. Tissez des histoires profondes et laissez votre
+              marque dans un monde sauvage et impitoyable, où chaque action
+              compte.
             </p>
           </div>
         </div>
