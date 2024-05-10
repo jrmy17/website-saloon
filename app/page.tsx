@@ -172,7 +172,7 @@ export default function Home() {
         </h2>
         <div className="flex justify-center space-x-4 mt-8">
           <p className="text-black">
-            Bienvenue dans <span className="bold">Saloon RP</span>, votre
+            Bienvenue dans <span className="font-bold">Saloon RP</span>, votre
             serveur rôleplay sérieux et immersif sur Red Dead Redemption 2 !
             Plongez dans l'Amérique des années 1890, une époque de défis et
             d'opportunités. Saloon RP offre une expérience de jeu riche en
