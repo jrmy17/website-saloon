@@ -168,16 +168,22 @@ export default function Home() {
       </section>
       <section className="p-6 pl-10 pr-10 sm:pl-15 sm:pr-15 lg:pl-20 lg:pr-20 xxl:pl-[20rem] xxl:pr-[20rem] bg-slate-100">
         <h2 className="text-4xl font-bold text-black text-left">
-          A propos de nous
+          A PROPOS DE NOUS
         </h2>
         <div className="flex justify-center space-x-4 mt-8">
           <p className="text-black">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            tincidunt, nunc nec consectetur. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Nunc tincidunt, nunc nec consectetur.
+            Bienvenue dans <span className="bold">Saloon RP</span>, votre
+            serveur rôleplay sérieux et immersif sur Red Dead Redemption 2 !
+            Plongez dans l'Amérique des années 1890, une époque de défis et
+            d'opportunités. Saloon RP offre une expérience de jeu riche en
+            détails, où chaque interaction et chaque décision influencent
+            l'univers vivant et authentique que nous avons créé. Ici, les
+            joueurs peuvent incarner des personnages uniques, tisser des
+            histoires profondes et participer à des aventures captivantes. Notre
+            communauté engagée et passionnée veille à maintenir un environnement
+            respectueux et réaliste, permettant à chacun de s'immerger
+            pleinement dans l'esprit du Far West. Rejoignez-nous pour écrire
+            votre propre légende dans ce monde sauvage et impitoyable.
           </p>
         </div>
         <Image
